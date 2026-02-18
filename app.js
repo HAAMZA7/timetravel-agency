@@ -233,7 +233,7 @@ async function sendMessage(userText) {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-                'HTTP-Referer': 'https://timetravel-agency.vercel.app',
+                'HTTP-Referer': window.location.origin,
                 'X-Title': 'TimeTravel Agency',
             },
             body: JSON.stringify({
@@ -254,8 +254,11 @@ async function sendMessage(userText) {
         appendMessage(reply, 'bot');
         conversationHistory.push({ role: 'assistant', content: reply });
     } catch (err) {
+        console.warn('OpenRouter error, using local fallback:', err.message);
         typingEl.remove();
-        appendMessage('Désolé, je rencontre une difficulté technique. Contactez-nous directement au +33 1 88 00 20 24.', 'bot');
+        const fallback = getLocalReply(userText);
+        appendMessage(fallback, 'bot');
+        conversationHistory.push({ role: 'assistant', content: fallback });
     }
 
     chatSend.disabled = false;
