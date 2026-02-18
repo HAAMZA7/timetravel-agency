@@ -155,7 +155,9 @@ document.getElementById('reservationForm')?.addEventListener('submit', (e) => {
 });
 
 // ===== CHATBOT =====
-const MISTRAL_API_KEY = 'VOTRE_CLE_MISTRAL_ICI'; // Remplacer par votre clé Mistral
+// OpenRouter API — mistral-small (gratuit)
+const OPENROUTER_API_KEY = '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';
+const OPENROUTER_MODEL = 'arcee-ai/trinity-large-preview:free';
 
 const SYSTEM_PROMPT = `Tu es Chronos, l'assistant virtuel de TimeTravel Agency, une agence de voyage temporel de luxe.
 Ton rôle : conseiller les clients sur les meilleures destinations temporelles.
@@ -226,38 +228,31 @@ async function sendMessage(userText) {
     const typingEl = appendTyping();
 
     try {
-        // Si pas de clé Mistral, utiliser les réponses locales
-        if (MISTRAL_API_KEY === 'VOTRE_CLE_MISTRAL_ICI') {
-            await new Promise(r => setTimeout(r, 1000));
-            typingEl.remove();
-            const reply = getLocalReply(userText);
-            appendMessage(reply, 'bot');
-            conversationHistory.push({ role: 'assistant', content: reply });
-        } else {
-            const response = await fetch('https://api.mistral.ai/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${MISTRAL_API_KEY}`,
-                },
-                body: JSON.stringify({
-                    model: 'mistral-small-latest',
-                    messages: [
-                        { role: 'system', content: SYSTEM_PROMPT },
-                        ...conversationHistory,
-                    ],
-                    max_tokens: 300,
-                    temperature: 0.7,
-                }),
-            });
+        const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+                'HTTP-Referer': 'https://timetravel-agency.vercel.app',
+                'X-Title': 'TimeTravel Agency',
+            },
+            body: JSON.stringify({
+                model: OPENROUTER_MODEL,
+                messages: [
+                    { role: 'system', content: SYSTEM_PROMPT },
+                    ...conversationHistory,
+                ],
+                max_tokens: 300,
+                temperature: 0.7,
+            }),
+        });
 
-            if (!response.ok) throw new Error('API Error');
-            const data = await response.json();
-            const reply = data.choices[0].message.content;
-            typingEl.remove();
-            appendMessage(reply, 'bot');
-            conversationHistory.push({ role: 'assistant', content: reply });
-        }
+        if (!response.ok) throw new Error(`API Error ${response.status}`);
+        const data = await response.json();
+        const reply = data.choices[0].message.content;
+        typingEl.remove();
+        appendMessage(reply, 'bot');
+        conversationHistory.push({ role: 'assistant', content: reply });
     } catch (err) {
         typingEl.remove();
         appendMessage('Désolé, je rencontre une difficulté technique. Contactez-nous directement au +33 1 88 00 20 24.', 'bot');
