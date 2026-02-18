@@ -100,4 +100,4 @@ timetravel-agency/
 
 ## 📄 Licence
 
-Projet pédagogique — Ynov Campus M1/M2 Digital & IA — 2025/2026
+Projet pédagogique — Ynov Campus M1 Cyber — 2025/2026
