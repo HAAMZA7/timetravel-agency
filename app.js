@@ -159,7 +159,7 @@ document.getElementById('reservationForm')?.addEventListener('submit', (e) => {
 const OPENROUTER_API_KEY = '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';
 const OPENROUTER_MODEL = 'arcee-ai/trinity-large-preview:free';
 
-const SYSTEM_PROMPT = `Tu es Chronos, l'assistant virtuel de TimeTravel Agency, une agence de voyage temporel de luxe.
+const SYSTEM_PROMPT = `Tu es ZGEG, l'assistant virtuel de TimeTravel Agency, une agence de voyage temporel de luxe.
 Ton rôle : conseiller les clients sur les meilleures destinations temporelles.
 
 Ton ton :
@@ -287,7 +287,7 @@ function getLocalReply(text) {
         return '📋 Pour réserver, utilisez notre <a href="#reservation" style="color:var(--gold)">formulaire de réservation</a> sur cette page. Notre équipe vous contacte sous 24h pour finaliser les détails. Groupes de 8 personnes maximum.';
     }
     if (t.includes('bonjour') || t.includes('salut') || t.includes('hello')) {
-        return '👋 Bonjour ! Je suis <strong>Chronos</strong>, votre conseiller en voyages temporels. Nous proposons 3 destinations exceptionnelles : Paris 1889, Le Crétacé (-65M ans) et Florence 1504. Quelle époque vous attire ?';
+        return '👋 Bonjour ! Je suis <strong>ZGEG</strong>, votre conseiller en voyages temporels. Nous proposons 3 destinations exceptionnelles : Paris 1889, Le Crétacé (-65M ans) et Florence 1504. Quelle époque vous attire ?';
     }
     if (t.includes('recommand') || t.includes('conseil') || t.includes('choisir')) {
         return '🤔 Pour vous recommander la destination idéale, dites-moi : préférez-vous l\'aventure nature (🦕 Crétacé), l\'élégance urbaine (🗼 Paris 1889) ou l\'art et la culture (🎨 Florence 1504) ? Vous pouvez aussi faire notre <a href="#quiz" style="color:var(--gold)">quiz de personnalisation</a> !';
