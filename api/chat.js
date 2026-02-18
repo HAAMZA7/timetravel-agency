@@ -13,7 +13,7 @@ export default async function handler(req, res) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer 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`,
+                'Authorization': `Bearer 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`,
                 'HTTP-Referer': 'https://timetravel-agency-pearl.vercel.app',
                 'X-Title': 'TimeTravel Agency',
             },
