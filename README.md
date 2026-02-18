@@ -2,7 +2,7 @@
 
 > Agence de voyage temporel de luxe | Projet pédagogique Ynov Campus M1
 
-**Membres du groupe :** Hamza DJOUDI · Thibault FOUCHET · Lucas DEBRUILLE · [Membre 4]
+**Membres du groupe :** Hamza DJOUDI · Thibault FOUCHET · Lucas DEBRUILLE
 
 ---
 
