@@ -226,22 +226,14 @@ async function sendMessage(userText) {
     const typingEl = appendTyping();
 
     try {
-        const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        const response = await fetch('/api/chat', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-                'HTTP-Referer': window.location.origin,
-                'X-Title': 'TimeTravel Agency',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                model: OPENROUTER_MODEL,
                 messages: [
                     { role: 'system', content: SYSTEM_PROMPT },
                     ...conversationHistory,
                 ],
-                max_tokens: 300,
-                temperature: 0.7,
             }),
         });
 
