@@ -155,7 +155,7 @@ document.getElementById('reservationForm')?.addEventListener('submit', (e) => {
 });
 
 // ===== CHATBOT =====
-// OpenRouter API — mistral-small (gratuit)
+// OpenRouter API
 const OPENROUTER_API_KEY = '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';
 const OPENROUTER_MODEL = 'arcee-ai/trinity-large-preview:free';
 

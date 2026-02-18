@@ -8,7 +8,7 @@
 
 ## 🌐 Demo Live
 
-**[→ timetravel-agency.vercel.app](https://timetravel-agency.vercel.app)**
+**[→ timetravel-agency-pearl.vercel.app](https://timetravel-agency-pearl.vercel.app)**
 
 ---
 
@@ -20,7 +20,7 @@
 | CSS3 (Vanilla) | Design system, animations, glassmorphism |
 | JavaScript ES6+ | Logique, quiz, chatbot |
 | AOS.js | Animations au scroll |
-| Mistral AI API | Chatbot conversationnel (mistral-small) |
+| OpenRouter API | Chatbot conversationnel IA |
 | Vercel | Hébergement & déploiement |
 | Google Fonts | Playfair Display + Inter |
 
@@ -44,10 +44,10 @@
 - [x] Design responsive (mobile-first)
 
 ### Phase 3 — Intelligence Artificielle
-- [x] **Chatbot IA "Chronos"** (Exercice 3.1)
+- [x] **Chatbot IA "ZGEG"** (Exercice 3.1)
   - Widget flottant en bas à droite
-  - Intégration Mistral AI API (mistral-small-latest)
-  - Fallback local intelligent (sans clé API)
+  - Intégration OpenRouter API
+  - Fallback local intelligent (réponses prédéfinies)
   - Historique de conversation avec contexte
   - Suggestions rapides prédéfinies
   - Personnalité définie : conseiller en voyages temporels
@@ -66,8 +66,7 @@
 
 | Outil | Usage |
 |---|---|
-| **Antigravity (Google DeepMind)** | Génération du code complet (HTML/CSS/JS) |
-| **Mistral AI — mistral-small** | Chatbot conversationnel en production |
+| **OpenRouter API** | Chatbot conversationnel ZGEG |
 | **Unsplash** | Images des destinations (libres de droits) |
 
 ---
@@ -84,16 +83,6 @@ open index.html
 # ou
 python -m http.server 8080
 ```
-
-### Configuration Chatbot Mistral (optionnel)
-
-1. Créer un compte sur [mistral.ai](https://mistral.ai)
-2. Générer une clé API gratuite
-3. Dans `app.js`, remplacer :
-```javascript
-const MISTRAL_API_KEY = 'VOTRE_CLE_MISTRAL_ICI';
-```
-> Sans clé API, le chatbot fonctionne en mode local avec des réponses prédéfinies.
 
 ---
 
