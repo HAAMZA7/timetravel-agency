@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTravel Agency — Voyagez à travers les âges</title>
+    <meta name="description" content="TimeTravel Agency — L'agence de voyage temporel de luxe. Explorez Paris 1889, le Crétacé et Florence 1504.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⧖</span>
+                <span>TimeTravel Agency</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">L'Agence</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#reservation">Réserver</a></li>
+            </ul>
+            <a href="#reservation" class="nav-cta">Réserver un voyage</a>
+            <button class="nav-burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="stars" id="stars"></div>
+            <div class="nebula"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">✦ Agence de Voyage Temporel de Luxe</p>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                Le temps est<br>
+                <span class="gradient-text">votre terrain de jeu</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                Traversez les siècles. Vivez l'histoire. Revenez transformé.
+                <br>Trois destinations. Une seule agence. L'impossible rendu possible.
+            </p>
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
+                <a href="#destinations" class="btn-primary">Explorer les destinations</a>
+                <a href="#quiz" class="btn-ghost">Trouver mon époque →</a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+                <div class="stat">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Destinations</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">65M</span>
+                    <span class="stat-label">Années couvertes</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Retour garanti</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Défiler</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="section-eyebrow">Notre histoire</p>
+                    <h2 class="section-title">L'agence qui a<br>réinventé le voyage</h2>
+                    <p class="about-desc">
+                        Fondée en 2024 par des passionnés d'histoire et de physique quantique, 
+                        TimeTravel Agency est la première agence au monde à proposer des voyages 
+                        temporels certifiés. Chaque expédition est encadrée par nos guides experts 
+                        et nos chrononautes certifiés.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">🛡️</span>
+                            <div>
+                                <strong>Sécurité Absolue</strong>
+                                <p>Protocoles de retour triple-vérifiés</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎭</span>
+                            <div>
+                                <strong>Immersion Totale</strong>
+                                <p>Costumes et briefings historiques inclus</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⭐</span>
+                            <div>
+                                <strong>Luxe & Exclusivité</strong>
+                                <p>Groupes de 8 personnes maximum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="clock-container">
+                        <div class="clock-ring ring-1"></div>
+                        <div class="clock-ring ring-2"></div>
+                        <div class="clock-ring ring-3"></div>
+                        <div class="clock-center">
+                            <span class="clock-symbol">⧖</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DESTINATIONS ===== -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-eyebrow">Nos voyages</p>
+                <h2 class="section-title">Choisissez votre époque</h2>
+                <p class="section-subtitle">Trois destinations soigneusement sélectionnées pour leur richesse historique et leur sécurité.</p>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- Paris 1889 -->
+                <div class="dest-card" data-aos="fade-up" data-aos-delay="100" id="dest-paris">
+                    <div class="dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80" alt="Paris 1889 Belle Époque" class="dest-img" loading="lazy">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-badge">Belle Époque</div>
+                        <div class="dest-year">1889</div>
+                    </div>
+                    <div class="dest-content">
+                        <h3 class="dest-title">Paris, 1889</h3>
+                        <p class="dest-desc">
+                            Assistez à l'inauguration de la Tour Eiffel lors de l'Exposition Universelle. 
+                            Flânez sur les Grands Boulevards illuminés au gaz, savourez la cuisine 
+                            française dans ses cafés historiques et côtoyez Gustave Eiffel lui-même.
+                        </p>
+                        <div class="dest-highlights">
+                            <span>🗼 Tour Eiffel</span>
+                            <span>🎨 Impressionnisme</span>
+                            <span>🥐 Gastronomie</span>
+                        </div>
+                        <div class="dest-footer">
+                            <div class="dest-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-value">12 500 €</span>
+                            </div>
+                            <a href="#reservation" class="btn-dest">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Crétacé -->
+                <div class="dest-card dest-featured" data-aos="fade-up" data-aos-delay="200" id="dest-cretace">
+                    <div class="dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1519880856348-763a8b40aa79?w=800&q=80" alt="Crétacé -65 millions d'années" class="dest-img" loading="lazy">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-badge dest-badge-featured">⭐ Best-seller</div>
+                        <div class="dest-year">-65M ans</div>
+                    </div>
+                    <div class="dest-content">
+                        <h3 class="dest-title">Le Crétacé</h3>
+                        <p class="dest-desc">
+                            Plongez 65 millions d'années en arrière dans une nature sauvage et 
+                            préhistorique. Observez les dinosaures dans leur habitat naturel depuis 
+                            un véhicule blindé ultra-sécurisé. Une expérience unique au monde.
+                        </p>
+                        <div class="dest-highlights">
+                            <span>🦕 Dinosaures</span>
+                            <span>🌿 Nature vierge</span>
+                            <span>🌋 Volcans actifs</span>
+                        </div>
+                        <div class="dest-footer">
+                            <div class="dest-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-value">28 000 €</span>
+                            </div>
+                            <a href="#reservation" class="btn-dest">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Florence 1504 -->
+                <div class="dest-card" data-aos="fade-up" data-aos-delay="300" id="dest-florence">
+                    <div class="dest-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1543429258-a5d3a5e9c7c8?w=800&q=80" alt="Florence 1504 Renaissance" class="dest-img" loading="lazy">
+                        <div class="dest-overlay"></div>
+                        <div class="dest-badge">Renaissance</div>
+                        <div class="dest-year">1504</div>
+                    </div>
+                    <div class="dest-content">
+                        <h3 class="dest-title">Florence, 1504</h3>
+                        <p class="dest-desc">
+                            Vivez au cœur de la Renaissance italienne. Rencontrez Michel-Ange 
+                            à l'apogée de sa création, visitez les ateliers des Médicis et 
+                            assistez à la naissance des chefs-d'œuvre qui ont changé l'art à jamais.
+                        </p>
+                        <div class="dest-highlights">
+                            <span>🎨 Michel-Ange</span>
+                            <span>🏛️ Architecture</span>
+                            <span>🍷 Art de vivre</span>
+                        </div>
+                        <div class="dest-footer">
+                            <div class="dest-price">
+                                <span class="price-label">À partir de</span>
+                                <span class="price-value">15 800 €</span>
+                            </div>
+                            <a href="#reservation" class="btn-dest">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== QUIZ ===== -->
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-eyebrow">Personnalisation</p>
+                <h2 class="section-title">Quelle époque vous correspond ?</h2>
+                <p class="section-subtitle">Répondez à 4 questions pour découvrir votre destination idéale.</p>
+            </div>
+
+            <div class="quiz-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="quizProgress"></div>
+                </div>
+
+                <!-- Q1 -->
+                <div class="quiz-step active" data-step="1">
+                    <h3 class="quiz-question">Quel type d'expérience recherchez-vous ?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="culture">🎨 Culturelle et artistique</button>
+                        <button class="quiz-option" data-value="aventure">🦕 Aventure et nature</button>
+                        <button class="quiz-option" data-value="elegance">✨ Élégance et raffinement</button>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="quiz-step" data-step="2">
+                    <h3 class="quiz-question">Votre période préférée ?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="moderne">🏙️ Histoire moderne (XIXe siècle)</button>
+                        <button class="quiz-option" data-value="prehistoire">🌋 Temps anciens et origines</button>
+                        <button class="quiz-option" data-value="renaissance">🏛️ Renaissance et classicisme</button>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="quiz-step" data-step="3">
+                    <h3 class="quiz-question">Vous préférez :</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="urbain">🌆 L'effervescence urbaine</button>
+                        <button class="quiz-option" data-value="nature">🌿 La nature sauvage</button>
+                        <button class="quiz-option" data-value="art">🖼️ L'art et l'architecture</button>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="quiz-step" data-step="4">
+                    <h3 class="quiz-question">Votre activité idéale :</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="monuments">🗼 Visiter des monuments</button>
+                        <button class="quiz-option" data-value="faune">🦖 Observer la faune</button>
+                        <button class="quiz-option" data-value="musees">🏛️ Explorer des musées</button>
+                    </div>
+                </div>
+
+                <!-- Résultat -->
+                <div class="quiz-result" id="quizResult">
+                    <div class="result-icon" id="resultIcon">⧖</div>
+                    <h3 class="result-title" id="resultTitle">Votre destination idéale</h3>
+                    <p class="result-desc" id="resultDesc"></p>
+                    <a href="#reservation" class="btn-primary" id="resultCTA">Réserver cette destination</a>
+                    <button class="btn-ghost" id="quizRetry">Recommencer le quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESERVATION ===== -->
+    <section class="reservation" id="reservation">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-eyebrow">Planifiez votre voyage</p>
+                <h2 class="section-title">Réservez votre expédition</h2>
+                <p class="section-subtitle">Notre équipe vous contacte sous 24h pour finaliser les détails.</p>
+            </div>
+
+            <form class="reservation-form" id="reservationForm" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">Prénom</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Votre prénom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Nom</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+33 6 00 00 00 00">
+                    </div>
+                    <div class="form-group form-full">
+                        <label for="destination">Destination</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Choisissez votre époque...</option>
+                            <option value="paris-1889">Paris 1889 — Belle Époque (12 500 €)</option>
+                            <option value="cretace">Le Crétacé — -65M ans (28 000 €)</option>
+                            <option value="florence-1504">Florence 1504 — Renaissance (15 800 €)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="travelers">Nombre de voyageurs</label>
+                        <select id="travelers" name="travelers">
+                            <option value="1">1 voyageur</option>
+                            <option value="2">2 voyageurs</option>
+                            <option value="4">4 voyageurs</option>
+                            <option value="8">8 voyageurs (groupe)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date souhaitée</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-group form-full">
+                        <label for="message">Message (optionnel)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Demandes spéciales, questions..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary btn-submit">
+                    <span>Envoyer ma demande</span>
+                    <span class="btn-icon">→</span>
+                </button>
+                <div class="form-success" id="formSuccess">
+                    <span>✅</span>
+                    <p>Demande envoyée ! Notre équipe vous contacte sous 24h.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">⧖ TimeTravel Agency</div>
+                    <p>L'agence de voyage temporel de luxe. Depuis 2024, nous rendons l'impossible possible.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Destinations</h4>
+                    <ul>
+                        <li><a href="#dest-paris">Paris 1889</a></li>
+                        <li><a href="#dest-cretace">Le Crétacé</a></li>
+                        <li><a href="#dest-florence">Florence 1504</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Agence</h4>
+                    <ul>
+                        <li><a href="#about">Notre histoire</a></li>
+                        <li><a href="#quiz">Quiz destination</a></li>
+                        <li><a href="#reservation">Réservation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📍 1 Rue du Temps, Paris</p>
+                    <p>📞 +33 1 88 00 20 24</p>
+                    <p>✉️ contact@timetravel.agency</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 TimeTravel Agency. Projet pédagogique — Ynov Campus M1.</p>
+                <p>Membres : <strong>[Vos noms ici]</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== CHATBOT ===== -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Ouvrir le chat">
+            <span class="chat-icon">💬</span>
+            <span class="chat-close">✕</span>
+            <span class="chat-notif">1</span>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chat-header">
+                <div class="chat-agent">
+                    <div class="agent-avatar">⧖</div>
+                    <div>
+                        <strong>Chronos</strong>
+                        <span class="agent-status">● En ligne</span>
+                    </div>
+                </div>
+                <button class="chat-close-btn" id="chatClose">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-msg bot">
+                    <div class="msg-bubble">
+                        Bonjour ! Je suis <strong>Chronos</strong>, votre conseiller en voyages temporels. 🕰️<br><br>
+                        Comment puis-je vous aider à choisir votre destination ?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-suggestions">
+                <button class="suggestion" onclick="sendSuggestion('Quelles sont vos destinations ?')">Vos destinations ?</button>
+                <button class="suggestion" onclick="sendSuggestion('Quels sont les prix ?')">Les prix ?</button>
+                <button class="suggestion" onclick="sendSuggestion('Est-ce que c\'est dangereux ?')">C'est sûr ?</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Posez votre question..." autocomplete="off">
+                <button id="chatSend" aria-label="Envoyer">→</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
